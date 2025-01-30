@@ -3,6 +3,7 @@ package wsconnection
 import (
 	"errors"
 	"fmt"
+	"github.com/Pomog/bomberman/backend/webmodel"
 	"runtime"
 	"runtime/debug"
 )

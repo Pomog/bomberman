@@ -1,4 +1,4 @@
-##This project involves creating a Bomberman-inspired multiplayer game, where players compete until only one remains. Each player starts in a different corner of the map, battling to be the last one standing.
+## This project involves creating a Bomberman-inspired multiplayer game, where players compete until only one remains. Each player starts in a different corner of the map, battling to be the last one standing.
 
 ### Key aspects include:
 
