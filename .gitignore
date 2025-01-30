@@ -1,0 +1,38 @@
+# IntelliJ IDEA files
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+logs/
+log/
+*.log
+
+# Golang files
+bin/
+pkg/
+*.exe
+*.test
+*.out
+*.a
+*.o
+*.so
+vendor/
+go.sum
+
+# Node.js files
+node_modules/
+npm-debug.log
+yarn-error.log
+dist/
+build/
+.cache/
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# OS-specific files
+.DS_Store
+Thumbs.db
