@@ -13,3 +13,14 @@ You can test the backend by visiting the following URL in your browser or using 
 ```html
 http://localhost:8000/health
 ```
+
+### To start
+in the backend folder run
+```
+go run .
+```
+in main folder run
+```
+node server.mjs
+```
+

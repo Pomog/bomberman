@@ -1,0 +1,1 @@
+### This folder is for all the game assets like pictures, sprites and so on!

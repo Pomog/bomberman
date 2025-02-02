@@ -1,0 +1,498 @@
+body {
+    background-color: #101010;
+}
+
+#logo {
+    display: flex;
+    width: 180px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#welcome {
+    display: block;
+}
+
+#gameheader {
+    margin-bottom: 10px;
+    margin-top: 0px;
+    height: 50px;
+}
+
+.welcomescreens {
+    display: flex;
+    flex-direction: column;
+    background-color: #212121e5;
+    border: 2px solid #141414;
+    box-shadow: 0px 20px 30px #00000073;
+    border-radius: 10px;
+    width: 400px;
+    height: 320px;
+    margin: 0 auto;
+    color: rgb(209, 209, 209);
+    padding: 30px;
+    margin-bottom: 10px;
+}
+
+#welcometothegame {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    padding: 15px;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 30px;
+    color: rgba(186, 186, 186, 0.34);
+}
+
+.welcometext {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.644);
+    text-align: center;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.errormessage {
+    display: flex;
+    color: red;
+}
+
+.hide {
+    display: none;
+}
+
+#chooseName {
+    display: flex;
+    flex-direction: column;
+}
+
+#chooseusername {
+    height: 40px;
+    width: 300px;
+    margin-left: 12.5%;
+    border: 0px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#waiting10sec {
+    color: rgb(195, 73, 25);
+    border: 5px solid rgb(74, 74, 74);
+    font-family: 'Luckiest Guy', cursive;
+    text-align: center;
+    text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    padding: 10px;
+    margin: 30px;
+    /*margin-top: 50px;*/
+    border-radius: 70px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    outline: 5px solid rgb(100, 100, 100);
+    outline-offset: 7px;
+    background: linear-gradient(180deg, rgba(195, 73, 25, 1) 0%, rgba(212, 203, 23, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*#chooseusername:focus {
+    outline: none;
+}*/
+#trainingbutton {
+    width: 200px;
+    height: 40px;
+    margin-left: 25%;
+    margin-top: 8%;
+    border-radius: 5px;
+    border: 1.5px solid rgb(195, 73, 25);
+    background: rgba(195, 73, 25, 0);
+    background: linear-gradient(180deg, rgba(195, 73, 25, 1) 0%, rgba(212, 203, 23, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 20px;
+    color: rgb(195, 73, 25);
+    box-shadow: 0px 20px 30px #00000048;
+    transition: 0.2;
+}
+
+#trainingbutton:hover {
+    box-shadow: 0px 30px 40px #0000003d;
+    transform: scale(1.01);
+}
+
+.startgame {
+    width: 200px;
+    height: 40px;
+    margin-left: 25%;
+    margin-top: 8%;
+    border-radius: 5px;
+    border: 0px solid rgb(0, 0, 0);
+    background: rgb(195, 73, 25);
+    background: linear-gradient(180deg, rgba(195, 73, 25, 1) 0%, rgba(212, 203, 23, 1) 100%);
+    cursor: pointer;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 20px;
+    color: rgba(16, 16, 16, 0.954);
+    box-shadow: 0px 20px 30px #00000048;
+    transition: 0.2;
+}
+
+.startgame:hover {
+    box-shadow: 0px 30px 40px #0000003d;
+    transform: scale(1.01);
+}
+
+#gameover {
+    position: absolute;
+    width: 554px;
+    height: 362px;
+    background-color: #1a1a1a8d;
+    box-shadow: 0 5px 5px #1a1a1a;
+    top: 143px;
+    right: calc(49.5vw - 270px);
+    z-index: 100;
+}
+
+#youdied {
+    position: absolute;
+    color: rgb(195, 73, 25);
+    background: linear-gradient(180deg, rgba(195, 73, 25, 1) 0%, rgba(212, 203, 23, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Luckiest Guy', cursive;
+    left: 115px;
+    top: 115px;
+    font-size: 80px;
+}
+
+#helpdivyoudied {
+    position: absolute;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 80px;
+    color: #00000000;
+    text-shadow: 0px 0px 100px rgb(0, 0, 0), 3px 3px 10px rgba(0, 0, 0, 0.605);
+    left: 115px;
+    top: 115px;
+}
+
+#youwon {
+    position: absolute;
+    color: rgb(195, 73, 25);
+    background: linear-gradient(180deg, rgba(195, 73, 25, 1) 0%, rgba(212, 203, 23, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Luckiest Guy', cursive;
+    left: 115px;
+    top: 115px;
+    font-size: 80px;
+    animation: won.5s infinite;
+}
+
+@keyframes won {
+    0% {
+        transform: scale(1.05)
+    }
+
+    50% {
+        transform: scale(1)
+    }
+
+    100% {
+        transform: scale(1.05)
+    }
+}
+
+#helpdivyouwon {
+    position: absolute;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 80px;
+    color: #00000000;
+    text-shadow: 0px 0px 100px rgb(255, 56, 179), 3px 3px 10px rgb(0, 0, 0);
+    left: 115px;
+    top: 115px;
+    animation: won.5s infinite;
+}
+
+#youwonthegame {
+    position: absolute;
+    width: 554px;
+    height: 362px;
+    background-color: #ffffff8d;
+    box-shadow: 0 5px 5px #1a1a1a;
+    background: linear-gradient(180deg, rgba(255, 136, 0, 0.779) 0%, rgba(255, 234, 0, 0.806) 50%, rgba(255, 183, 0, 0.737) 100%);
+    top: 143px;
+    right: calc(49.5vw - 270px);
+    z-index: 100;
+}
+
+#chat {
+    /* the chat component */
+    position: absolute;
+    display: block;
+    right: calc(49.5vw - 546px);
+    top: 148px;
+    color: rgb(219, 219, 219);
+    width: 250px;
+    height: 332px;
+    padding: 10px;
+    background-color: rgb(39, 39, 39);
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #0000003d;
+}
+
+#chatmessagearea {
+    border: 1px solid rgba(0, 0, 0, 0.505);
+    border-radius: 5px;
+    background-color: #222222;
+    box-shadow: inset 0 3px 10px #00000054;
+    font-size: 12px;
+    color: rgba(188, 188, 188, 0.783);
+    text-shadow: 3px 3px 3px #00000054;
+    width: 210px;
+    height: 210px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#sendmessagebutton {
+    width: 45px;
+    height: 34px;
+    font-size: 30px;
+    padding-left: 8px;
+    color: rgba(81, 81, 81, 0.498);
+    /*background-color: #121212;*/
+    border: 1px solid rgba(0, 0, 0, 0.505);
+    box-shadow: inset 0 3px 10px #00000054;
+    background: linear-gradient(180deg, rgba(195, 73, 25, 1) 0%, rgba(212, 203, 23, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-radius: 5px;
+    /*margin-top: -10px;*/
+    margin-bottom: 10px;
+    transition: 0.2s;
+}
+
+#sendmessagebutton:hover {
+    box-shadow:
+        /*0px 30px 40px #0000003d,*/
+        0px 2px 5px #0000003d, inset 0 0 8px rgb(180, 66, 25);
+    transform: scale(0.95);
+}
+
+#chattextarea {
+    width: 157px;
+    margin-left: 10px;
+    border-radius: 5px;
+    height: 22px;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.505);
+    color: rgba(188, 188, 188, 0.783);
+    background-color: #222222;
+    box-shadow: inset 0 3px 10px #00000054;
+    font-family: 'Open Sans', sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 10px;
+    margin-bottom: 7px;
+    /*transition: 0.2s;*/
+}
+
+#chattextarea:focus {
+    outline: none;
+    background-color: #1c1c1c;
+}
+
+.chatmessage {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1px;
+}
+
+#ChatStatusConnected {
+    color: rgba(188, 188, 188, 0.445);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 12px;
+}
+
+#chatform {
+    display: flex;
+    flex-direction: row;
+}
+
+#chatheader {
+    margin: 10px;
+    margin-top: 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.644);
+    font-size: 16px;
+}
+
+#game {
+    /* the whole game with elements div*/
+    display: flex;
+    flex-direction: row;
+    background-color: #212121e5;
+    border: 2px solid #141414;
+    width: 1106px;
+    height: 352px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+#gameinfo {
+    /* the whole game info component */
+    background-color: rgb(39, 39, 39);
+    color: rgb(219, 219, 219);
+    border: 1px solid rgba(0, 0, 0, 0.299);
+    box-shadow: 0px 0px 5px #0000003d;
+    width: 250px;
+    margin-right: 10px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#gameinfoheader {
+    margin: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.644);
+}
+
+#gamepanel {
+    border: 1px solid gray;
+    color: rgb(219, 219, 219);
+}
+
+.playerone {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgba(0, 0, 0, 0.505);
+    box-shadow: inset 0 3px 10px #00000054;
+    background-color: #202020;
+    border-radius: 5px;
+    /*background: rgb(16,16,16);
+    background: linear-gradient(183deg, rgba(16,16,16,1) 0%, rgb(37, 37, 37) 100%);*/
+    width: 220px;
+    height: 22px;
+    margin: 7px;
+    padding: 5px;
+    transition: 0.2s;
+}
+
+.playerone:hover {
+    box-shadow: 0px 3px 3px #0000003d, inset 0 0 8px rgb(180, 66, 25);
+    /*transform: scale(1.01);*/
+}
+
+#gamespecs {
+    border: 1px solid rgba(0, 0, 0, 0.505);
+    border-radius: 5px;
+    background: rgb(35, 35, 35);
+    box-shadow: inset 0 3px 10px #00000054;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.644);
+    font-family: 'Open Sans', sans-serif;
+    color: rgba(188, 188, 188, 0.783);
+    font-weight: 400;
+    font-size: 14px;
+    width: 197px;
+    height: 80px;
+    margin: 7px;
+    margin-top: 30px;
+    padding: 16px;
+}
+
+.userGameStatus {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: rgba(188, 188, 188, 0.783);
+    width: 40px;
+    padding-top: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.644);
+    font-weight: 400;
+    font-size: 14px;
+}
+
+#hearticon {
+    color: rgb(104, 39, 39);
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.189);
+}
+
+.avatar {
+    background-color: #382424;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 20px;
+    width: 25px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.505);
+}
+
+.gamePlayerUsername {
+    /*background-color: #000000;*/
+    color: rgba(188, 188, 188, 0.783);
+    padding-left: 10px;
+    padding-top: 2px;
+    margin-left: 5px;
+    width: 140px;
+    margin-right: 10px;
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.644);
+    font-weight: 400;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.gamePlayerUsername:hover {
+    color: rgba(219, 219, 219, 0.783);
+}
+
+#gamedata {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+#gamescreen {
+    /* the game field 18w x 12h squares */
+    position: relative;
+    width: 544px;
+    height: 352px;
+    background-color: rgb(26, 75, 33);
+    border-radius: 5px;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+.player {
+    position: absolute;
+}
+
+.bomb,
+.explosion {
+    position: absolute;
+}
