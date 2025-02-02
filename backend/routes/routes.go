@@ -10,8 +10,8 @@ import (
 // CreateAPIroutes sets up the HTTP routes for the application and returns the modified ServeMux.
 // It registers routes for joining games and WebSocket handlers.
 func CreateAPIroutes(mux *http.ServeMux, app *server.Application, wsHandlers wsconnection.WSmux) *http.ServeMux {
-	// Example of static file handling (currently commented out):
-	// mux.Handle("/img/", http.StripPrefix("/img/", http.FileServer(http.Dir("data/img"))))
+	// Register the health check route
+	mux.Handle("/health", handlers.HealthCheck(app))
 
 	// Register a route for joining a game, where the JoinGame handler
 	// manages WebSocket connections for the game
